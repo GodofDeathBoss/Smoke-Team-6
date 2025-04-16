@@ -16,10 +16,11 @@
 
         /* Splash Page Styles */
         .splash-container {
-            background-image: url('./images/smoketeam6-background.jpg'); /* Path to your background image */
-            background-size: cover;
-            background-position: center;
-            height: 100%;
+            background-image: url('./images/smoketeam6-background.jpg'); /* Path to your image */
+            background-size: cover; /* Ensures it scales proportionally */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents repeating */
+            height: 100vh; /* Full viewport height */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -30,7 +31,7 @@
         }
 
         .splash-logo {
-            width: 200px; /* Adjust logo size as needed */
+            width: 200px; /* Adjust logo size */
             margin-bottom: 20px;
         }
 
@@ -71,9 +72,9 @@
 </head>
 <body>
     <div class="splash-container">
-        <img src="./images/logo.png" alt="Smoketeam6 Logo" class="splash-logo"> <!-- Path to your logo -->
-        <div class="splash-tagline">Enter Any Line Here</div>
-        <a href="signup.html" class="join-button">Join Us Now</a> <!-- Redirects to the sign-up page -->
+        <img src="./images/logo.png" alt="Smoketeam6 Logo" class="splash-logo"> <!-- Replace logo.png if necessary -->
+        <div class="splash-tagline">Purveyor of Authentic Culture</div>
+        <a href="signup.html" class="join-button">Join Us Now</a>
     </div>
 </body>
 </html>
