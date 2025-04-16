@@ -5,40 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smoketeam6</title>
     <style>
-        /* Global Styles */
-        body, html {
+        body {
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
             font-family: Arial, sans-serif;
         }
 
-        /* Splash Page Styles */
+        .logo {
+            position: absolute;
+            top: 10px; /* Distance from the top */
+            left: 10px; /* Distance from the left */
+            width: 100px; /* Resize the logo */
+            height: auto; /* Maintain aspect ratio */
+        }
+
         .splash-container {
-            background-image: url('./images/smoketeam6-background.jpg'); /* Path to your image */
-            background-size: cover; /* Ensures it scales proportionally */
-            background-position: center; /* Centers the image */
-            background-repeat: no-repeat; /* Prevents repeating */
-            height: 100vh; /* Full viewport height */
+            background-image: url('images/smoketeam6-background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             text-align: center;
             color: white;
             text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
         }
 
-        .splash-logo {
-            width: 200px; /* Adjust logo size */
-            margin-bottom: 20px;
-        }
-
         .splash-tagline {
             font-size: 2rem;
             margin-bottom: 30px;
-            font-weight: bold;
         }
 
         .join-button {
@@ -48,7 +44,6 @@
             background: #e63946;
             border: none;
             border-radius: 5px;
-            cursor: pointer;
             text-transform: uppercase;
             text-decoration: none;
         }
@@ -56,24 +51,12 @@
         .join-button:hover {
             background: #d62828;
         }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .splash-tagline {
-                font-size: 1.5rem;
-            }
-
-            .join-button {
-                font-size: 1rem;
-                padding: 10px 20px;
-            }
-        }
     </style>
 </head>
 <body>
+    <img src="images/logo.png" alt="Smoketeam6 Logo" class="logo">
     <div class="splash-container">
-        <img src="./images/logo.png" alt="Smoketeam6 Logo" class="splash-logo"> <!-- Replace logo.png if necessary -->
-        <div class="splash-tagline">Purveyor of Authentic Culture</div>
+        <div class="splash-tagline">Welcome to Smoketeam6</div>
         <a href="signup.html" class="join-button">Join Us Now</a>
     </div>
 </body>
