@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Smoketeam6</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(45deg, #000, #444);
+        }
+        header img {
+            width: 150px;
+        }
+        header h1 {
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        /* Form Section */
+        .signup-container {
+            max-width: 400px;
+            margin: 50px auto;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        .signup-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .signup-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .signup-container input {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background: #333;
+            color: #fff;
+            font-size: 1rem;
+        }
+        .signup-container input:focus {
+            outline: none;
+            border-color: #e63946;
+        }
+        .signup-container button {
+            padding: 10px;
+            background: #e63946;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .signup-container button:hover {
+            background: #d62828;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            margin-top: 20px;
+        }
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="./images/logo.png" alt="Smoketeam6 Logo">
+        <h1>Smoketeam6</h1>
+    </header>
+
+    <!-- Sign-Up Form -->
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form action="submit-signup.php" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Smoketeam6. All rights reserved.</p>
+    </footer>
+</body>
+</html>
