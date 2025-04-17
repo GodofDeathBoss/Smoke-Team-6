@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smoketeam6</title>
     <style>
-        body {
+        /* Global Styles */
+        body, html {
             margin: 0;
             padding: 0;
+            height: 100%;
+            overflow: hidden;
             font-family: Arial, sans-serif;
         }
 
@@ -18,7 +21,7 @@
             width: 100px; /* Resize the logo */
             height: auto; /* Maintain aspect ratio */
         }
-
+        /* Splash Page Styles */
         .splash-container {
             background-image: url('images/smoketeam6-background.jpg');
             background-size: cover;
@@ -50,6 +53,18 @@
 
         .join-button:hover {
             background: #d62828;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .splash-tagline {
+                font-size: 1.5rem;
+            }
+
+            .join-button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
