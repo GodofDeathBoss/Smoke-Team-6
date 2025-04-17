@@ -3,66 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup - Smoketeam6</title>
+    <title>Signup Page</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-image: url('images/logo.png'); /* Use logo as background */
-            background-size: contain; /* Ensure the logo is fully visible */
-            background-repeat: no-repeat; /* Prevent tiling */
-            background-position: center; /* Center the logo in the background */
-            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
         }
-
-        .signup-container {
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+        .signup-form {
+            background: #fff;
             padding: 20px;
             border-radius: 8px;
-            color: white;
-            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             width: 300px;
         }
-
-        .signup-container h1 {
+        .signup-form h2 {
             margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
         }
-
-        .signup-container input {
+        .signup-form input[type="text"],
+        .signup-form input[type="email"],
+        .signup-form input[type="submit"] {
             width: 100%;
             padding: 10px;
-            margin: 10px 0;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
             border-radius: 4px;
-            border: none;
         }
-
-        .signup-container button {
-            width: 100%;
-            padding: 10px;
-            background: #e63946;
+        .signup-form input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
             border: none;
-            border-radius: 4px;
-            color: white;
-            font-size: 1rem;
-            cursor: pointer;
+            font-weight: bold;
         }
-
-        .signup-container button:hover {
-            background: #d62828;
+        .signup-form input[type="submit"]:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="signup-container">
-        <h1>Signup</h1>
-        <input type="text" placeholder="Username" />
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <button>Register</button>
-    </div>
+    <form class="signup-form" action="process-signup.php" method="POST">
+        <h2>Signup</h2>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="submit" value="Sign Up">
+    </form>
 </body>
 </html>
