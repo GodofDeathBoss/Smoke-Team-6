@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('images/logo.png'); /* Use logo as background */
+            background-image: url('images/logo.png'), linear-gradient(#f9f9f9, #f9f9f9); /* Use logo as background with fallback */
             background-size: contain; /* Ensure the logo is fully visible */
             background-repeat: no-repeat; /* Prevent tiling */
             background-position: center; /* Center the logo in the background */
@@ -23,12 +23,12 @@
             background: #fff;
             padding: 20px;
             border-radius: 8px;
-            color: white;
+            color: #000; /* Changed text color to black for better contrast */
             text-align: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             width: 300px;
         }
-        .signup-form h2 {
+        .signup-form h1 {
             margin-bottom: 20px;
             font-size: 24px;
             text-align: center;
