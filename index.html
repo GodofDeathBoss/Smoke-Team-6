@@ -36,19 +36,25 @@
         }
 
         .join-button {
-            padding: 10px 20px; /* Make the button smaller */
-            font-size: 0.9rem; /* Reduce the font size */
+            width: 50px; /* Set equal width and height for a circular shape */
+            height: 50px;
+            padding: 0; /* Remove padding to maintain the circular shape */
+            font-size: 0.7rem; /* Adjust the font size for the smaller button */
             color: #fff;
             background: #e63946;
             border: none;
-            border-radius: 5px;
+            border-radius: 50%; /* Makes the button round */
             text-transform: uppercase;
             text-decoration: none;
             position: absolute; /* Position it absolutely */
             bottom: 20px; /* Space from the bottom */
             right: 70px; /* Space from the right, avoiding the imaginary square */
+            display: flex; /* Center align text inside the button */
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add some shadow for a better look */
         }
-
+        
         .join-button:hover {
             background: #d62828;
         }
