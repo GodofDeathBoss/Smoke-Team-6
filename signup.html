@@ -11,7 +11,7 @@
             padding: 0;
             background-image: url('images/logo.webp'), linear-gradient(#f9f9f9, #f9f9f9); /* Use optimized logo as background with fallback */
             background-size: contain; /* Ensure the logo is fully visible */
-            background-repeat: no-repeat; /* Prevent tiling */
+            background-repeat: repeat; /* Prevent tiling */
             background-position: center; /* Center the logo in the background */
             display: flex;
             justify-content: center;
@@ -73,8 +73,15 @@
             <input type="text" name="first_name" placeholder="First Name" required>
             <input type="text" name="last_name" placeholder="Last Name" required>
         </div>
-        <input type="email" name="email" placeholder="Email" required>
+        <div class="email-container">
+            <input type="email" name="email" placeholder="Email" required>
+        </div>
         <input type="submit" value="Sign Up">
+        <!-- For same directory -->
+            <form action="process-signup.php" method="POST">
+
+        <!-- If in a subfolder -->
+            <form action="/subfolder/process-signup.php" method="POST">
     </form>
 </body>
 </html>
