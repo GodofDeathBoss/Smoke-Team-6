@@ -9,61 +9,43 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            height: 100vh;
+            position: relative; /* Needed for absolute positioning */
+            cursor: pointer; /* Show clickable cursor */
         }
 
         .logo {
             position: absolute;
-            top: 10px; /* Distance from the top */
-            left: 10px; /* Distance from the left */
-            width: 100px; /* Resize the logo */
-            height: auto; /* Maintain aspect ratio */
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: auto;
+            z-index: 10; /* Ensure logo stays above clickable layer */
         }
 
-        .splash-container {
+        .clickable-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: url('images/smoketeam6-background.jpg');
-            background-size: contain; /* Ensures the entire image is visible */
-            background-repeat: no-repeat; /* Prevents the image from repeating */
-            background-position: center; /* Centers the image within the container */
-            background-color: black; /* Sets the background color to black */
-            height: 100vh;
-            display: flex;
-            flex-direction: column; /* Stack items vertically */
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            background-size: cover;
+            background-position: center;
+            background-color: black;
+            z-index: 1; /* Place below logo */
         }
 
-        .join-button {
-            width: 50px; /* Set equal width and height for a circular shape */
-            height: 50px;
-            padding: 0; /* Remove padding to maintain the circular shape */
-            font-size: 0.7rem; /* Adjust the font size for the smaller button */
-            color: #fff;
-            background: #e63946;
-            border: none;
-            border-radius: 50%; /* Makes the button round */
-            text-transform: uppercase;
-            text-decoration: none;
-            position: absolute; /* Position it absolutely */
-            bottom: 20px; /* Space from the bottom */
-            right: 70px; /* Space from the right, avoiding the imaginary square */
-            display: flex; /* Center align text inside the button */
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add some shadow for a better look */
-        }
-        
-        .join-button:hover {
-            background: #d62828;
+        /* Optional: Add hover effect */
+        .clickable-background:hover {
+            opacity: 0.9;
         }
     </style>
 </head>
 <body>
     <img src="images/logo.png" alt="Smoke Team 6 Logo" class="logo">
-    <div class="splash-container">
-        <a href="signup.html" class="join-button"></a>
-    </div>
+    
+    <!-- Full-screen clickable area -->
+    <a href="signup.html" class="clickable-background"></a>
 </body>
 </html>
