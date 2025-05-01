@@ -67,36 +67,12 @@
     </style>
 </head>
 <body>
-    <form class="signup-form" action="process-signup.php" method="POST">
-        <h1>Signup</h1>
-        <div class="name-container">
-            <input type="text" name="first_name" placeholder="First Name" required>
-            <input type="text" name="last_name" placeholder="Last Name" required>
-        </div>
-        <div class="email-container">
-            <input type="email" name="email" placeholder="Email" required>
-        </div>
-        <input type="submit" value="Sign Up">
-    <form
-            action="https://formspree.io/f/xyzwkzrz"
-            method="POST"
-            >
-        <label>
-            Your email:riverajustin1989@gmail.com
-        <input type="email" name="email">
-        </label>
-        <label>
-            Your message: Test Message
-        <textarea name="message"></textarea>
-        </label>
-        <!-- your other form fields go here -->
-        <button type="submit">Send</button>
-        </form>
-        <!-- For same directory -->
-            <form action="process-signup.php" method="POST">
-
-        <!-- If in a subfolder -->
-            <form action="/subfolder/process-signup.php" method="POST">
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+  <input type="text" name="first_name" required>
+  <input type="text" name="last_name" required>
+  <input type="email" name="email" required>
+  <input type="hidden" name="_subject" value="New Signup">
+  <input type="submit" value="Sign Up">
     </form>
 </body>
 </html>
