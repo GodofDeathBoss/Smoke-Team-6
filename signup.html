@@ -35,18 +35,18 @@
         }
         .signup-form input[type="text"],
         .signup-form input[type="email"] {
-            width: 100%;
+            width: calc(100% - 20px); /* Full width minus padding */
             padding: 10px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            box-sizing: border-box; /* Ensure padding is included in width */
         }
-
         .signup-form input[type="submit"] {
             background-color: #007BFF; /* Custom blue color */
             color: #fff; /* White text for better contrast */
             padding: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
             border: none;
             font-weight: bold;
             border-radius: 4px;
@@ -58,7 +58,6 @@
             display: flex; /* Use Flexbox to align items horizontally */
             gap: 10px; /* Add spacing between the input fields */
         }
-
         .name-container input[type="text"] {
             flex: 1; /* Make the input fields take equal width */
             padding: 10px;
